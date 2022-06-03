@@ -45,7 +45,10 @@ namespace lol
                 return;
             if (controller.GetSummoner(viewModel.Region, viewModel.SummonerName))
             {
-                MessageBox.Show("OK");
+                WindowProfile profile = new WindowProfile();
+                profile.Show();
+                this.Close();
+                
             }
             else
             {
