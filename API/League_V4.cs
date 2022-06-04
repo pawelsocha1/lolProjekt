@@ -8,22 +8,23 @@ using System.Threading.Tasks;
 
 namespace lol.API
 {
-
-    public class Summoner_V4 : Api
+    public class League_V4 : Api
     {
-        public Summoner_V4(string region) : base(region)
+        public League_V4(string region) : base(region)
         {
+
         }
 
-        public SummonerDTO GetSummonerByName(string SummonerName)
+        public List<PositionDTO> GetPositions(string summonerId)
         {
-            string path = "summone r/v4/summoners/by-name/" + SummonerName;
+
+            string path = "league/v4/positions/by-summoner/" + summonerId;
 
             var response = GET(GetURI(path));
             string content = response.Content.ReadAsStringAsync().Result;
-            if(response.StatusCode == System.Net.HttpStatusCode.OK)
+            if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                return JsonConvert.DeserializeObject<SummonerDTO>(content);
+                return JsonConvert.DeserializeObject<List<PositionDTO>>(content);
             }
             else
             {

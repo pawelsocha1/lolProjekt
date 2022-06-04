@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lol.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,13 @@ namespace lol.View
     /// </summary>
     public partial class WindowProfile : Window
     {
+        ControllerProfile controller;
+    
         public WindowProfile()
         {
+            controller = new ControllerProfile();
             InitializeComponent();
+            this.DataContext = controller.GetContext();
         }
     }
 }
