@@ -13,7 +13,7 @@
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch">
                 <Border Width="100" Height="100" Margin="20 20 0 10" BorderBrush="Gray" HorizontalAlignment="Left" BorderThickness="1" CornerRadius="15">
                     <Border.Background>
-                        <ImageBrush ImageSource="{Binding Path=ProfileIcon}"/>
+                        <ImageBrush ImageSource="{Binding Path=Icon}"/>
                     </Border.Background>
                 </Border>
                 <TextBlock Margin="20 15" FontSize="30" Text="{Binding Path=SummonerName}" Foreground="DarkGray"/>
@@ -32,7 +32,7 @@
                     <TextBlock Text="{Binding Path=Level}" HorizontalAlignment="Center" FontSize="80" Foreground="Gray"/>
                 </StackPanel>
                 <Grid Margin="20 10">
-                    <Button HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}" Width="100">
+                    <Button x:Name="ButtonSearch" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}" Width="100" Click="ButtonSearch_Click" Cursor="Hand">
                         <materialDesign:PackIcon Kind="Search" Width="24" Height="24"/>
                     </Button>
                     <Button HorizontalAlignment="Right" Width="100" Content="LOGIN"/>
@@ -40,7 +40,7 @@
             </StackPanel>
         </Border>
         <StackPanel HorizontalAlignment="Right" Margin="30 10">
-            <Image Source="{Binding Path=Emblem}" Width="77" Height="285" RenderTransformOrigin="0.545,1.718">
+            <Image Source="{Binding Path = Emblem}" Width="77" Height="285" RenderTransformOrigin="0.545,1.718">
                 <Image.Effect>
                     <DropShadowEffect BlurRadius="40" ShadowDepth="1"/>
                 </Image.Effect>

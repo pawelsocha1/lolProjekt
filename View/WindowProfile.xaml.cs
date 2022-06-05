@@ -28,5 +28,11 @@ namespace lol.View
             InitializeComponent();
             this.DataContext = controller.GetContext();
         }
+
+        private void ButtonSearch_Click(object sender, RoutedEventArgs e)
+        {
+            controller.OpenMain();
+            this.Close();
+        }
     }
 }

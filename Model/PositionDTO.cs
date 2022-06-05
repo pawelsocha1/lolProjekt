@@ -12,6 +12,6 @@ namespace lol.Model
         public string Rank { get; set; }
         public int Wins { get; set; }
         public int Losses { get; set; }
-        public int QueueType { get; set; }
+        public string QueueType { get; set; }
     }
 }

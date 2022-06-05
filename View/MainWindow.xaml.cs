@@ -32,10 +32,7 @@ namespace lol
             this.DataContext = viewModel;
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+      
 
         private void ButtonSignUp_Click(object sender, RoutedEventArgs e)
         {

@@ -24,9 +24,14 @@ namespace lol.Controller
         {
             League_V4 league = new League_V4(Constants.Region);
 
-            var position = league.GetPositions(summoner.Id).Where(p=>p.QueueType.Equals("RANKED_SOLO_5x5")).FirstOrDefault();
+            var position = league.GetPositions(summoner.Id).Where(p => p.QueueType.Equals("RANKED_SOLO_5x5")).FirstOrDefault();
 
             return position ?? new PositionDTO();
+        }
+        public void OpenMain()
+        {
+            MainWindow profile = new MainWindow();
+            profile.Show();
         }
     }
 }

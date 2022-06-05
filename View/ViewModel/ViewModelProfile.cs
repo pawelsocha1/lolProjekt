@@ -26,7 +26,7 @@ namespace lol.View.ViewModel
             Rank = rank;
             Wins = wins;
             Losses = losses;
-            Emblem = "/LoLGoal;component/Assets/emblems/Emblem_" + tier + ".png";
+            Emblem = "Assets/emblems/Emblem_" + tier + ".png";
         }
     }
 }
