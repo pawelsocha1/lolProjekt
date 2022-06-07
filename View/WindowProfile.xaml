@@ -40,7 +40,7 @@
             </StackPanel>
         </Border>
         <StackPanel HorizontalAlignment="Right" Margin="30 10">
-            <Image Source="{Binding Path = Emblem}" Width="77" Height="285" RenderTransformOrigin="0.545,1.718">
+            <Image Source="{Binding Path = Emblem}" Width="93" Height="306" RenderTransformOrigin="0.545,1.718">
                 <Image.Effect>
                     <DropShadowEffect BlurRadius="40" ShadowDepth="1"/>
                 </Image.Effect>
